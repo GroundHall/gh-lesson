@@ -5,13 +5,13 @@
 import Boom from 'boom';
 
 export function ReplyPromiseResponse(target, name, descriptor) {
-  let fn = descriptor.value.bind(target);
+  const fn = descriptor.value.bind(target);
   descriptor.value = (request, reply) => {
-    fn(request, reply).then(result => {
+    fn(request, reply).then((result) => {
       reply(result);
-    }).catch(error => {
+    }).catch((error) => {
       reply(Boom.badImplementation(error));
-    })
-  }
+    });
+  };
   return descriptor;
 }

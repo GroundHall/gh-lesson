@@ -6,19 +6,19 @@
 import Joi from 'joi';
 
 const schema = Joi.object({
-	SERVICE_PORT: Joi.number().default(80),
-	NODE_ENV: Joi.string().default("production"),
-	HOST: Joi.string().default('localhost'),
-	DB_DRIVER_PORT: Joi.number().positive().default(28015),
-	DB_HOST: Joi.string().default("localhost"),
-	DB_NAME: Joi.string().default("GroundHall"),
-	DB_TABLE_NAME: Joi.string().default("Lessons"),
-}).unknown().required()
+  SERVICE_PORT: Joi.number().default(80),
+  NODE_ENV: Joi.string().default('production'),
+  HOST: Joi.string().default('localhost'),
+  DB_DRIVER_PORT: Joi.number().positive().default(28015),
+  DB_HOST: Joi.string().default('localhost'),
+  DB_NAME: Joi.string().default('GroundHall'),
+  DB_TABLE_NAME: Joi.string().default('Lessons'),
+}).unknown().required();
 
 const {
   error,
-  value: env 
+  value: env
 } = Joi.validate(process.env, schema);
-	if (error) throw error;
+if (error) throw error;
 
 export default env;

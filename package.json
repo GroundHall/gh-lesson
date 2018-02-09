@@ -17,6 +17,7 @@
     "dev-watch-backend": "nodemon --inspect-brk=9229 ./build/backend.js"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "ava": "^0.21.0",
     "babel-plugin-transform-decorators": "^6.24.1",
     "babel-polyfill": "^6.23.0",
@@ -24,6 +25,8 @@
     "boom": "^5.1.0",
     "colors": "^1.1.2",
     "dateformat": "^2.0.0",
+    "eslint-plugin-react": "^7.6.1",
+    "global": "^4.3.2",
     "hapi": "^16.4.3",
     "joi": "^10.6.0",
     "rethinkdbdash": "^2.3.29",

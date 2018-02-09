@@ -1,8 +1,8 @@
 import Handlers from './handlers';
 
 import {
-	LessonModel,
-	LessonModelRequired
+  LessonModel,
+  LessonModelRequired
 } from './db/model';
 
 
@@ -57,6 +57,6 @@ const routes = [
     path: '/lessons/{lessonId}',
     handler: Handlers.deleteLesson
   }
-]
+];
 
 export default routes;
