@@ -8,21 +8,21 @@ import Joi from 'joi';
 export const LessonModel = Joi.object({
   index: Joi.number().integer(),
   day: Joi.string(),
-  teacher_id: Joi.string(),
-  room_id: Joi.string(),
-  class_id: Joi.string(),
-  subject_id: Joi.string(),
-  time_start: Joi.string(),
-  time_end: Joi.string()
+  teacherId: Joi.string(),
+  roomId: Joi.string(),
+  classId: Joi.string(),
+  subjectId: Joi.string(),
+  timeStart: Joi.string(),
+  timeEnd: Joi.string()
 }).required();
 
 export const LessonModelRequired = Joi.object({
   index: Joi.number().integer().required(),
   day: Joi.string().required(),
-  teacher_id: Joi.string().required(),
-  room_id: Joi.string().required(),
-  class_id: Joi.string().required(),
-  subject_id: Joi.string().required(),
-  time_start: Joi.string().required(),
-  time_end: Joi.string().required()
+  teacherId: Joi.string().required(),
+  roomId: Joi.string().required(),
+  classId: Joi.string().required(),
+  subjectId: Joi.string().required(),
+  timeStart: Joi.string().required(),
+  timeEnd: Joi.string().required()
 }).required();
